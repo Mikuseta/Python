@@ -1,0 +1,27 @@
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+first = input("You are at a crossroad.\n""Which way do you want to go? (left/right)\n ").lower()
+
+if first == "left":
+    second = input("You arrive at a beautiful lake.\n"
+                   "There is an island in the middle of the lake.\n"
+                   "Do you wait for a boat or swim to the island?\n"
+                   "Choose (wait/swim)\n ").lower()
+    if second == "wait":
+        third = input("You arrive at the island unharmed.\n"
+                      "There is house with 3 doors.\n"
+                    "One red, one yellow and one blue.\n"
+                      "Which colour do you choose to open?\n").lower()
+        if third == "red":
+            print("You were engulfed by fire! Game over.")
+        elif third == "blue":
+            print("You were eaten by wild beasts. Game over.")
+        elif third == "yellow":
+            print("You found the treasure! You win!")
+        else:
+            print("You got caught in a temporal loop of wrong decisions. Game over.")
+    else:
+        print("You were attacked by a pack of wild pikes. Game over.")
+
+else:
+    print("You fall into a hole. Game over.")
